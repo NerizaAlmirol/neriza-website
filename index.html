@@ -1,23 +1,1346 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neriza Almirol | Freelance Agile & Program Consultant</title>
-    <meta
-      name="description"
-      content="Barcelona-based freelance Agile and program consultant helping startups and growing teams deliver with more clarity, better systems, and less chaos."
-    />
-    <meta property="og:title" content="Neriza Almirol | Freelance Agile & Program Consultant" />
-    <meta
-      property="og:description"
-      content="I help startups and growing teams deliver with more clarity, better systems, and less chaos."
-    />
-    <meta property="og:type" content="website" />
-    <script type="module" crossorigin src="./assets/index-BWD26M7k.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-D_K-CbWq.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neriza Almirol — Project Coordinator & Social Media Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F8F4EE;
+    --warm-white: #FDFAF6;
+    --charcoal: #1C1917;
+    --slate: #44403C;
+    --muted: #78716C;
+    --border: rgba(28,25,23,0.1);
+    --accent-gold: #C9933A;
+    --accent-terracotta: #C26E52;
+    --accent-sage: #6B8C6A;
+    --accent-light: #F0E6D8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 3rem;
+    height: 64px;
+    background: rgba(253,250,246,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+    color: var(--charcoal);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; height: 100%; }
+  .nav-links a {
+    font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-cta {
+    font-size: 0.8rem; letter-spacing: 0.05em;
+    padding: 0.55rem 1.4rem;
+    background: var(--charcoal);
+    color: var(--warm-white);
+    border: none; border-radius: 100px; cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent-gold); }
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px; cursor: pointer;
+    background: none; border: none; padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--charcoal); border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--warm-white); z-index: 99;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 2rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; color: var(--charcoal); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--accent-gold); }
+  .mobile-menu-close {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    font-size: 1.5rem; background: none; border: none;
+    cursor: pointer; color: var(--muted);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 4rem;
+  }
+  .hero-left {
+    padding: 6rem 4rem 4rem 5rem;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+  }
+  .hero-tag::before {
+    content: ''; display: block;
+    width: 2rem; height: 1px;
+    background: var(--accent-gold);
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 4.5vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent-terracotta);
+  }
+  .hero-desc {
+    font-size: 1rem; line-height: 1.8; color: var(--slate);
+    max-width: 440px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    height: 48px;
+    background: var(--charcoal);
+    color: var(--warm-white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; letter-spacing: 0.04em;
+    border: none; border-radius: 100px; cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--accent-gold); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+    font-size: 0.85rem; color: var(--muted); text-decoration: none;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { color: var(--charcoal); border-color: var(--charcoal); }
+
+  .hero-right {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-image-area {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 3rem;
+  }
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .stat-card {
+    background: var(--warm-white);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label {
+    font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Decorative name display in hero right */
+  .hero-name-display {
+    position: absolute; top: 3rem; left: 3rem; right: 3rem;
+  }
+  .hero-avatar {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-terracotta) 0%, var(--accent-gold) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem; color: white;
+    margin-bottom: 1.5rem;
+  }
+  .hero-role-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .role-tag {
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.75rem; letter-spacing: 0.04em;
+    background: var(--warm-white);
+    color: var(--slate);
+    border: 1px solid var(--border);
+  }
+  .role-tag.active {
+    background: var(--charcoal);
+    color: white; border-color: var(--charcoal);
+  }
+
+  /* SECTION SHARED */
+  section { padding: 6rem 5rem; }
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent-gold);
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .section-label::after {
+    content: ''; flex: 1; max-width: 3rem; height: 1px;
+    background: var(--accent-gold);
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    color: var(--charcoal);
+  }
+  h2 em { font-style: italic; color: var(--accent-terracotta); }
+  .section-desc {
+    color: var(--muted); line-height: 1.8; max-width: 560px;
+    margin-bottom: 3.5rem;
+  }
+
+  /* SERVICES */
+  .services { background: var(--charcoal); color: var(--warm-white); }
+  .services .section-label { color: var(--accent-gold); }
+  .services .section-label::after { background: var(--accent-gold); }
+  .services h2 { color: var(--warm-white); }
+  .services .section-desc { color: rgba(253,250,246,0.6); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: rgba(253,250,246,0.1);
+    border: 1px solid rgba(253,250,246,0.1);
+  }
+  .service-card {
+    background: var(--charcoal);
+    padding: 2.5rem;
+    transition: background 0.25s;
+  }
+  .service-card:hover { background: #2C2917; }
+  .service-icon {
+    width: 3rem; height: 3rem;
+    border: 1px solid rgba(253,250,246,0.15);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--warm-white);
+    margin-bottom: 0.75rem;
+  }
+  .service-card p {
+    font-size: 0.875rem; line-height: 1.75;
+    color: rgba(253,250,246,0.55);
+  }
+  .service-card ul {
+    list-style: none; margin-top: 1.25rem;
+  }
+  .service-card ul li {
+    font-size: 0.8rem; color: rgba(253,250,246,0.5);
+    padding: 0.35rem 0;
+    border-top: 1px solid rgba(253,250,246,0.07);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .service-card ul li::before {
+    content: '→'; color: var(--accent-gold); font-size: 0.75rem;
+  }
+
+  /* PORTFOLIO */
+  .portfolio { background: var(--cream); }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .portfolio-card {
+    background: var(--warm-white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(28,25,23,0.1);
+  }
+  .portfolio-card.featured {
+    grid-column: span 2;
+  }
+  .card-visual {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  .portfolio-card.featured .card-visual { height: 260px; }
+  .card-visual-inner {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card-bg-1 { background: linear-gradient(135deg, #C26E52 0%, #C9933A 100%); }
+  .card-bg-2 { background: linear-gradient(135deg, #6B8C6A 0%, #4A6B49 100%); }
+  .card-bg-3 { background: linear-gradient(135deg, #44403C 0%, #78716C 100%); }
+  .card-bg-4 { background: linear-gradient(135deg, #C26E52 0%, #8B4A35 100%); }
+  .card-visual-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-style: italic;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    padding: 1rem;
+  }
+  .card-visual-meta {
+    position: absolute; top: 1rem; right: 1rem;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 100px;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: white;
+  }
+  .card-body { padding: 1.5rem; }
+  .card-tag {
+    font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent-gold); margin-bottom: 0.5rem;
+  }
+  .card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; margin-bottom: 0.5rem;
+    color: var(--charcoal);
+  }
+  .card-body p {
+    font-size: 0.82rem; line-height: 1.7; color: var(--muted);
+  }
+  .card-metrics {
+    display: flex; gap: 1.5rem; margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  .card-metric {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .card-metric-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--charcoal);
+  }
+  .card-metric-label {
+    font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  /* PROCESS */
+  .process { background: var(--warm-white); }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .process-step {
+    padding: 2.5rem 2rem;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .process-step:last-child { border-right: none; }
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; font-weight: 700;
+    color: var(--accent-light);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+  .process-step h3 {
+    font-size: 1rem; font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+  }
+  .process-step p {
+    font-size: 0.82rem; line-height: 1.75; color: var(--muted);
+  }
+
+  /* SKILLS */
+  .skills-section {
+    background: var(--cream);
+    padding: 6rem 5rem;
+  }
+  .skills-layout {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+  .skill-group { margin-bottom: 2rem; }
+  .skill-group-label {
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 1rem;
+  }
+  .skill-bar {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .skill-name { font-size: 0.85rem; min-width: 150px; color: var(--slate); }
+  .skill-track {
+    flex: 1; height: 3px;
+    background: var(--border);
+    border-radius: 100px; overflow: hidden;
+  }
+  .skill-fill {
+    height: 100%; border-radius: 100px;
+    background: var(--accent-gold);
+    transition: width 1s ease;
+  }
+
+  .skills-right h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; margin-bottom: 1.5rem;
+  }
+  .tools-cloud {
+    display: flex; flex-wrap: wrap; gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+  .tool-pill {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.78rem; color: var(--slate);
+    background: var(--warm-white);
+  }
+  .tool-pill.highlight {
+    background: var(--charcoal); color: var(--warm-white);
+    border-color: var(--charcoal);
+  }
+
+  /* SOCIAL MEDIA */
+  .social-section {
+    background: var(--charcoal);
+    padding: 6rem 5rem;
+    color: var(--warm-white);
+  }
+  .social-section h2 { color: var(--warm-white); }
+  .social-section .section-desc { color: rgba(253,250,246,0.55); }
+  .social-showcase {
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: 3rem; align-items: center;
+  }
+  .ig-mockup {
+    background: #1A1A1A;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .ig-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .ig-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, #C26E52, #C9933A);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; font-weight: 700; color: white;
+  }
+  .ig-handle { font-size: 0.82rem; color: rgba(255,255,255,0.9); }
+  .ig-sub { font-size: 0.7rem; color: rgba(255,255,255,0.4); }
+  .ig-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .ig-cell {
+    aspect-ratio: 1;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    position: relative; overflow: hidden;
+  }
+  .ig-overlay {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .ig-cell:hover .ig-overlay { opacity: 1; }
+  .ig-bg-1 { background: linear-gradient(135deg, #8B4A35, #C9933A); }
+  .ig-bg-2 { background: linear-gradient(135deg, #3D5A3D, #6B8C6A); }
+  .ig-bg-3 { background: linear-gradient(135deg, #44403C, #78716C); }
+  .ig-bg-4 { background: linear-gradient(135deg, #C26E52, #F0A07A); }
+  .ig-bg-5 { background: linear-gradient(135deg, #2C3E2C, #4A6B49); }
+  .ig-bg-6 { background: linear-gradient(135deg, #5C4C44, #8B7A70); }
+  .ig-stats {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; gap: 2rem;
+  }
+  .ig-stat-val { font-size: 1rem; font-weight: 500; color: white; }
+  .ig-stat-key { font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+
+  .social-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; color: white; margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .social-info p {
+    font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.55);
+    margin-bottom: 1.5rem;
+  }
+  .social-deliverables {
+    display: flex; flex-direction: column; gap: 0.6rem;
+  }
+  .deliverable {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 0.83rem; color: rgba(255,255,255,0.7);
+  }
+  .deliverable::before {
+    content: '✓';
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    color: var(--charcoal);
+    font-size: 0.65rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials { padding: 6rem 5rem; background: var(--warm-white); }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .testimonial-card {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--border);
+  }
+  .testimonial-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; color: var(--accent-gold);
+    line-height: 1; margin-bottom: 1rem;
+  }
+  .testimonial-text {
+    font-size: 0.88rem; line-height: 1.8;
+    color: var(--slate); margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  .testimonial-author {
+    font-size: 0.8rem; font-weight: 500;
+    color: var(--charcoal);
+  }
+  .testimonial-role { font-size: 0.73rem; color: var(--muted); }
+
+  /* CONTACT */
+  .contact {
+    background: var(--cream);
+    padding: 6rem 5rem;
+  }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: start;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-group label {
+    font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); display: block;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    display: block;
+    width: 100%;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    line-height: 1.4;
+    height: 48px;
+    transition: border-color 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(201,147,58,0.1);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+    height: auto;
+    line-height: 1.6;
+  }
+  /* Custom select arrow */
+  .select-wrapper {
+    position: relative;
+  }
+  .select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--muted);
+    pointer-events: none;
+  }
+  .select-wrapper select { padding-right: 2.5rem; cursor: pointer; }
+  .form-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2rem;
+    height: 48px;
+    background: var(--charcoal);
+    color: var(--warm-white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    align-self: flex-start;
+    white-space: nowrap;
+  }
+  .form-submit-btn:hover { background: var(--accent-gold); transform: translateY(-1px); }
+
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; margin-bottom: 1rem;
+  }
+  .contact-info p {
+    font-size: 0.9rem; line-height: 1.8; color: var(--muted);
+    margin-bottom: 2rem;
+  }
+  .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 0.85rem; color: var(--slate); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-link:hover { color: var(--accent-gold); }
+  .contact-link-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .availability-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(107, 140, 106, 0.1);
+    border: 1px solid rgba(107, 140, 106, 0.3);
+    border-radius: 100px;
+    font-size: 0.75rem; color: var(--accent-sage);
+    margin-bottom: 2rem;
+  }
+  .availability-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent-sage);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--charcoal);
+    padding: 2.5rem 5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  footer .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; color: rgba(253,250,246,0.7);
+  }
+  footer p { font-size: 0.75rem; color: rgba(253,250,246,0.3); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a {
+    font-size: 0.75rem; color: rgba(253,250,246,0.4);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: rgba(253,250,246,0.8); }
+
+  /* =====================
+     RESPONSIVE BREAKPOINTS
+     ===================== */
+
+  /* TABLET — 768px to 1024px */
+  @media (max-width: 1024px) {
+    nav { padding: 0 2rem; height: 60px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 7rem 2rem 3rem; }
+    .hero-right { min-height: 400px; }
+    .hero-name-display { top: 2rem; left: 2rem; right: 2rem; }
+    .hero-avatar { width: 120px; height: 120px; font-size: 2.5rem; }
+    .hero-image-area { padding: 2rem; }
+    .hero-stats { grid-template-columns: repeat(4, 1fr); margin-bottom: 1rem; }
+
+    section { padding: 4rem 2rem; }
+    .skills-section { padding: 4rem 2rem; }
+    .social-section { padding: 4rem 2rem; }
+    .testimonials { padding: 4rem 2rem; }
+    .contact { padding: 4rem 2rem; }
+
+    .services-grid { grid-template-columns: 1fr 1fr; }
+
+    .portfolio-grid { grid-template-columns: 1fr 1fr; }
+    .portfolio-card.featured { grid-column: span 2; }
+
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .process-step { border-right: none; border-bottom: 1px solid var(--border); }
+    .process-step:nth-child(odd) { border-right: 1px solid var(--border); }
+    .process-step:last-child { border-bottom: none; }
+    .process-step:nth-child(3) { border-bottom: none; }
+
+    .skills-layout { grid-template-columns: 1fr; gap: 2rem; }
+
+    .social-showcase { grid-template-columns: 1fr; gap: 2rem; }
+
+    .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid .testimonial-card:last-child { grid-column: span 2; }
+
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+    footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+    footer p { order: 3; }
+    .footer-links { order: 2; }
+  }
+
+  /* MOBILE — up to 767px */
+  @media (max-width: 767px) {
+    nav { padding: 0 1.25rem; height: 56px; }
+    .nav-cta { display: none; }
+
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 6rem 1.25rem 2.5rem; }
+    h1 { font-size: clamp(2.2rem, 9vw, 3rem); }
+    .hero-desc { font-size: 0.9rem; }
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+    .btn-primary { width: 100%; justify-content: center; }
+    .btn-secondary { justify-content: center; height: auto; padding: 0.5rem 0; }
+    .hero-right { min-height: 380px; }
+    .hero-name-display { top: 1.5rem; left: 1.25rem; right: 1.25rem; }
+    .hero-avatar { width: 90px; height: 90px; font-size: 1.8rem; margin-bottom: 1rem; }
+    .hero-role-tags { gap: 0.4rem; }
+    .role-tag { font-size: 0.68rem; padding: 0.3rem 0.7rem; }
+    .hero-image-area { padding: 1.25rem; }
+    .hero-stats { grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.75rem; }
+    .stat-num { font-size: 1.6rem; }
+    .stat-label { font-size: 0.62rem; }
+    .stat-card { padding: 0.85rem; }
+
+    section { padding: 3.5rem 1.25rem; }
+    .skills-section { padding: 3.5rem 1.25rem; }
+    .social-section { padding: 3.5rem 1.25rem; }
+    .testimonials { padding: 3.5rem 1.25rem; }
+    .contact { padding: 3.5rem 1.25rem; }
+
+    h2 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+
+    .services-grid { grid-template-columns: 1fr; gap: 1px; }
+    .service-card { padding: 1.75rem 1.25rem; }
+
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-card.featured { grid-column: span 1; }
+    .portfolio-card.featured .card-visual { height: 200px; }
+
+    .process-steps { grid-template-columns: 1fr; border-radius: 12px; }
+    .process-step { border-right: none !important; border-bottom: 1px solid var(--border); padding: 1.75rem 1.25rem; }
+    .process-step:last-child { border-bottom: none; }
+    .step-num { font-size: 2.2rem; margin-bottom: 1rem; }
+
+    .skill-name { min-width: 120px; font-size: 0.8rem; }
+    .skills-right h3 { font-size: 1.3rem; }
+
+    .social-showcase { grid-template-columns: 1fr; gap: 2rem; }
+
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .testimonials-grid .testimonial-card:last-child { grid-column: span 1; }
+
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+    footer { padding: 1.5rem 1.25rem; flex-direction: column; gap: 0.75rem; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  }
+
+  /* SMALL MOBILE — up to 400px */
+  @media (max-width: 400px) {
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .stat-num { font-size: 1.4rem; }
+    h1 { font-size: 2rem; }
+    .hero-avatar { width: 72px; height: 72px; font-size: 1.4rem; }
+    .card-metrics { flex-wrap: wrap; gap: 0.75rem; }
+    .ig-stats { gap: 1rem; }
+  }
+
+  /* ===================== */
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-in {
+    animation: fadeUp 0.7s ease forwards;
+  }
+  .delay-1 { animation-delay: 0.1s; opacity: 0; }
+  .delay-2 { animation-delay: 0.25s; opacity: 0; }
+  .delay-3 { animation-delay: 0.4s; opacity: 0; }
+  .delay-4 { animation-delay: 0.55s; opacity: 0; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Neriza Almirol</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#social">Social</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's work together</a>
+  <button class="nav-hamburger" id="menuBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose">✕</button>
+  <a href="#services" class="menu-link">Services</a>
+  <a href="#work" class="menu-link">Work</a>
+  <a href="#social" class="menu-link">Social</a>
+  <a href="#contact" class="menu-link">Contact</a>
+  <a href="#contact" class="btn-primary menu-link" style="margin-top: 1rem; text-align:center; padding: 0.9rem 2.5rem;">Let's work together</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag animate-in">Available for projects</div>
+    <h1 class="animate-in delay-1">Projects Delivered. <em>Communities Built.</em></h1>
+    <p class="hero-desc animate-in delay-2">
+      I help brands deliver on time and grow online. From coordinating complex product launches to building engaged communities on social media — I make sure things actually get done.
+    </p>
+    <div class="hero-actions animate-in delay-3">
+      <a href="#work" class="btn-primary">See my work</a>
+      <a href="#contact" class="btn-secondary">Get in touch →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-area">
+      <div class="hero-name-display animate-in delay-1">
+        <div class="hero-avatar">NA</div>
+        <div class="hero-role-tags">
+          <span class="role-tag active">Project Coordinator</span>
+          <span class="role-tag active">Social Media Manager</span>
+          <span class="role-tag">Based in Barcelona</span>
+          <span class="role-tag">@barcelonafoodhunters</span>
+        </div>
+      </div>
+      <div class="hero-stats animate-in delay-4">
+        <div class="stat-card">
+          <div class="stat-num">30+</div>
+          <div class="stat-label">Projects coordinated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Brands managed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">On-time delivery</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">15K+</div>
+          <div class="stat-label">Community followers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-label">What I do</div>
+  <h2>Two ways I can <em>help your business</em></h2>
+  <p class="section-desc">Whether you need someone to keep your projects on track or grow your brand's presence online — I bring structure, creativity, and accountability to every engagement.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📋</div>
+      <h3>Project Coordination</h3>
+      <p>I keep your product development on track — from kickoff to launch. Clear communication, tight timelines, and zero surprises.</p>
+      <ul>
+        <li>Sprint planning & roadmap management</li>
+        <li>Cross-team communication & reporting</li>
+        <li>Risk identification & mitigation</li>
+        <li>Stakeholder updates & documentation</li>
+        <li>Delivery tracking & retrospectives</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📱</div>
+      <h3>Social Media Management</h3>
+      <p>I handle your brand's social presence end-to-end — strategy, content creation, scheduling, and community engagement.</p>
+      <ul>
+        <li>Content strategy & editorial calendar</li>
+        <li>Instagram, Facebook & TikTok content</li>
+        <li>Copywriting & caption writing</li>
+        <li>Community management & engagement</li>
+        <li>Analytics reporting & growth insights</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎯</div>
+      <h3>Content Creation</h3>
+      <p>Scroll-stopping content crafted for your brand voice. Reels, carousels, stories — everything your feed needs to convert.</p>
+      <ul>
+        <li>Short-form video scripting & planning</li>
+        <li>Branded content templates</li>
+        <li>Photo direction & art direction</li>
+        <li>UGC-style content creation</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Strategy & Consulting</h3>
+      <p>Not sure where to start? I help you build a clear social strategy or project framework from scratch, tailored to your goals.</p>
+      <ul>
+        <li>Social media audit & competitor analysis</li>
+        <li>90-day growth roadmap</li>
+        <li>Project management setup (Notion, Asana)</li>
+        <li>Team onboarding & process design</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="work">
+  <div class="section-label">Selected work</div>
+  <h2>Projects I'm <em>proud of</em></h2>
+  <p class="section-desc">A snapshot of recent project coordination and social media management work across different industries.</p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-card featured">
+      <div class="card-visual card-bg-1">
+        <div class="card-visual-inner">
+          <div class="card-visual-text">@barcelonafoodhunters</div>
+        </div>
+        <div class="card-visual-meta">Social Media</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Instagram · Food & Lifestyle</div>
+        <h3>Barcelona Food Hunters — Community Growth</h3>
+        <p>Built and grew a food-focused Instagram community in Barcelona from scratch, curating local dining experiences and growing an engaged audience of food lovers.</p>
+        <div class="card-metrics">
+          <div class="card-metric">
+            <div class="card-metric-val">15K+</div>
+            <div class="card-metric-label">Followers</div>
+          </div>
+          <div class="card-metric">
+            <div class="card-metric-val">8.4%</div>
+            <div class="card-metric-label">Engagement rate</div>
+          </div>
+          <div class="card-metric">
+            <div class="card-metric-val">3×</div>
+            <div class="card-metric-label">Growth in 6 months</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="card-visual card-bg-2">
+        <div class="card-visual-inner">
+          <div class="card-visual-text">Product Launch</div>
+        </div>
+        <div class="card-visual-meta">Coordination</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">SaaS · Project Coordination</div>
+        <h3>End-to-End Product Launch</h3>
+        <p>Coordinated a full product launch across design, development, and marketing teams — delivered on time and under budget.</p>
+        <div class="card-metrics">
+          <div class="card-metric">
+            <div class="card-metric-val">12</div>
+            <div class="card-metric-label">Team members</div>
+          </div>
+          <div class="card-metric">
+            <div class="card-metric-val">100%</div>
+            <div class="card-metric-label">On schedule</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="card-visual card-bg-3">
+        <div class="card-visual-inner">
+          <div class="card-visual-text">Brand Identity</div>
+        </div>
+        <div class="card-visual-meta">Social Media</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Hospitality · Content Strategy</div>
+        <h3>Restaurant Social Revamp</h3>
+        <p>Redesigned content strategy and managed social channels for a Barcelona restaurant, increasing reservations through organic reach.</p>
+        <div class="card-metrics">
+          <div class="card-metric">
+            <div class="card-metric-val">+220%</div>
+            <div class="card-metric-label">Profile visits</div>
+          </div>
+          <div class="card-metric">
+            <div class="card-metric-val">+40%</div>
+            <div class="card-metric-label">Bookings via IG</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="card-visual card-bg-4">
+        <div class="card-visual-inner">
+          <div class="card-visual-text">Sprint Planning</div>
+        </div>
+        <div class="card-visual-meta">Coordination</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">E-commerce · Agile Coordination</div>
+        <h3>Agile Sprint Setup & Management</h3>
+        <p>Set up Agile workflows from scratch for a growing e-commerce team, introduced Notion-based project tracking and cut delivery delays by 60%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="section-label">How I work</div>
+  <h2>A clear process, <em>every time</em></h2>
+  <p class="section-desc">Whether it's a 3-month project or ongoing social media management, my process stays consistent: transparent, structured, and results-driven.</p>
+
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <h3>Discovery Call</h3>
+      <p>We start with a 30-min call to understand your goals, current challenges, and what success looks like for you.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <h3>Strategy & Scope</h3>
+      <p>I put together a clear proposal with deliverables, timelines, and pricing. No vague commitments — just a real plan.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <h3>Execution</h3>
+      <p>I get to work — coordinating, creating, and communicating. You stay in the loop with weekly updates and shared dashboards.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <h3>Review & Refine</h3>
+      <p>Regular check-ins and end-of-cycle reports ensure we keep optimising and improving based on real data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section">
+  <div class="section-label">Skills & tools</div>
+  <div class="skills-layout">
+    <div>
+      <h2>Built for <em>delivery</em></h2>
+      <p class="section-desc" style="margin-bottom: 2.5rem;">A mix of hard skills and hands-on experience across project management and content creation.</p>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Project Management</div>
+        <div class="skill-bar"><span class="skill-name">Timeline Management</span><div class="skill-track"><div class="skill-fill" style="width:95%"></div></div></div>
+        <div class="skill-bar"><span class="skill-name">Stakeholder Comms</span><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div></div>
+        <div class="skill-bar"><span class="skill-name">Risk Management</span><div class="skill-track"><div class="skill-fill" style="width:85%"></div></div></div>
+        <div class="skill-bar"><span class="skill-name">Agile / Scrum</span><div class="skill-track"><div class="skill-fill" style="width:88%"></div></div></div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Social Media</div>
+        <div class="skill-bar"><span class="skill-name">Content Strategy</span><div class="skill-track"><div class="skill-fill" style="width:93%"></div></div></div>
+        <div class="skill-bar"><span class="skill-name">Instagram / TikTok</span><div class="skill-track"><div class="skill-fill" style="width:97%"></div></div></div>
+        <div class="skill-bar"><span class="skill-name">Community Management</span><div class="skill-track"><div class="skill-fill" style="width:92%"></div></div></div>
+        <div class="skill-bar"><span class="skill-name">Analytics & Reporting</span><div class="skill-track"><div class="skill-fill" style="width:83%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="skills-right">
+      <h3>Tools I work with daily</h3>
+      <div class="skill-group-label" style="margin-bottom: 0.75rem;">Project & Productivity</div>
+      <div class="tools-cloud">
+        <span class="tool-pill highlight">Notion</span>
+        <span class="tool-pill highlight">Asana</span>
+        <span class="tool-pill">Trello</span>
+        <span class="tool-pill">Jira</span>
+        <span class="tool-pill">Google Workspace</span>
+        <span class="tool-pill">Slack</span>
+        <span class="tool-pill">ClickUp</span>
+        <span class="tool-pill">Miro</span>
+      </div>
+
+      <div class="skill-group-label" style="margin-bottom: 0.75rem; margin-top: 1.5rem;">Social Media & Content</div>
+      <div class="tools-cloud">
+        <span class="tool-pill highlight">Later</span>
+        <span class="tool-pill highlight">Canva</span>
+        <span class="tool-pill highlight">Meta Business Suite</span>
+        <span class="tool-pill">Hootsuite</span>
+        <span class="tool-pill">Buffer</span>
+        <span class="tool-pill">CapCut</span>
+        <span class="tool-pill">Notion (Content Cal)</span>
+      </div>
+
+      <div class="skill-group-label" style="margin-bottom: 0.75rem; margin-top: 1.5rem;">Analytics</div>
+      <div class="tools-cloud">
+        <span class="tool-pill">Instagram Insights</span>
+        <span class="tool-pill">Google Analytics</span>
+        <span class="tool-pill">Metricool</span>
+        <span class="tool-pill">Sprout Social</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF / IG SECTION -->
+<section class="social-section" id="social">
+  <div class="section-label" style="color: var(--accent-gold);">Live proof</div>
+  <div class="social-showcase">
+    <div>
+      <h2 style="color: white; margin-bottom: 0.5rem;">@barcelonafoodhunters</h2>
+      <p class="section-desc" style="margin-bottom: 2rem;">My own brand. Proof that I don't just talk strategy — I execute it. A community built on authentic food storytelling across Barcelona.</p>
+      <div class="ig-mockup">
+        <div class="ig-header">
+          <div class="ig-avatar">BF</div>
+          <div>
+            <div class="ig-handle">barcelonafoodhunters</div>
+            <div class="ig-sub">Food · Barcelona · Lifestyle</div>
+          </div>
+        </div>
+        <div class="ig-grid">
+          <div class="ig-cell ig-bg-1"><div class="ig-overlay"><span style="color:white; font-size:0.8rem;">🍷 Wine & tapas</span></div></div>
+          <div class="ig-cell ig-bg-2"><div class="ig-overlay"><span style="color:white; font-size:0.8rem;">🥗 Hidden gems</span></div></div>
+          <div class="ig-cell ig-bg-3"><div class="ig-overlay"><span style="color:white; font-size:0.8rem;">🍕 Weekend brunch</span></div></div>
+          <div class="ig-cell ig-bg-4"><div class="ig-overlay"><span style="color:white; font-size:0.8rem;">🥂 Date night spots</span></div></div>
+          <div class="ig-cell ig-bg-5"><div class="ig-overlay"><span style="color:white; font-size:0.8rem;">🌮 Street food</span></div></div>
+          <div class="ig-cell ig-bg-6"><div class="ig-overlay"><span style="color:white; font-size:0.8rem;">☕ Coffee culture</span></div></div>
+        </div>
+        <div class="ig-stats">
+          <div><div class="ig-stat-val">15K+</div><div class="ig-stat-key">Followers</div></div>
+          <div><div class="ig-stat-val">8.4%</div><div class="ig-stat-key">Avg. engagement</div></div>
+          <div><div class="ig-stat-val">200+</div><div class="ig-stat-key">Posts</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="social-info">
+      <h3>What I deliver for clients managing their social media</h3>
+      <p>Every brand I manage gets the same attention and strategy that made @barcelonafoodhunters grow. No cookie-cutter content — just real storytelling that connects.</p>
+      <div class="social-deliverables">
+        <div class="deliverable">Monthly content calendar (30 days planned ahead)</div>
+        <div class="deliverable">3–5 feed posts + 10–15 stories per week</div>
+        <div class="deliverable">Reel/TikTok scripting and production planning</div>
+        <div class="deliverable">Community management (DMs, comments, replies)</div>
+        <div class="deliverable">Monthly analytics report with growth insights</div>
+        <div class="deliverable">Hashtag research & competitor monitoring</div>
+        <div class="deliverable">Collaboration & UGC outreach</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-label">Client love</div>
+  <h2>What people say <em>about working with me</em></h2>
+  <p class="section-desc" style="margin-bottom: 3rem;">Don't take my word for it — here's what clients and collaborators have to say.</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Neriza kept our entire launch on track across four different teams. She has this rare ability to stay calm under pressure while keeping everyone accountable. Delivery was on time, every single sprint.</p>
+      <div class="testimonial-author">Maria Santos</div>
+      <div class="testimonial-role">Product Manager, Tech Startup · Barcelona</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Our Instagram went from an afterthought to our top acquisition channel. Neriza understood our brand immediately and produced content that felt authentically ours. Engagement is up 300% in 4 months.</p>
+      <div class="testimonial-author">Carlos Vidal</div>
+      <div class="testimonial-role">Owner, Restaurant El Racó · Gràcia</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Working with Neriza on social strategy was a game-changer. She's not just a content creator — she's a strategic thinker who connects content to real business outcomes. Highly recommend.</p>
+      <div class="testimonial-author">Ana Reyes</div>
+      <div class="testimonial-role">Marketing Director, Fashion Brand</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label">Get in touch</div>
+  <div class="contact-grid">
+    <div>
+      <h2>Let's work <em>together</em></h2>
+      <p class="section-desc">Tell me about your project or what you need help with. I'll get back to you within 24 hours.</p>
+
+      <div class="contact-form">
+        <div class="form-group">
+          <label>Your name</label>
+          <input type="text" placeholder="Jane Smith">
+        </div>
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" placeholder="jane@company.com">
+        </div>
+        <div class="form-group">
+          <label>What do you need help with?</label>
+          <div class="select-wrapper">
+            <select>
+              <option value="">Select a service...</option>
+              <option>Project Coordination</option>
+              <option>Social Media Management</option>
+              <option>Content Creation</option>
+              <option>Strategy & Consulting</option>
+              <option>Something else</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Tell me more</label>
+          <textarea placeholder="Share a bit about your project, goals, and timeline..."></textarea>
+        </div>
+        <button class="form-submit-btn">Send message →</button>
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <div class="availability-badge">
+        <div class="availability-dot"></div>
+        Available for new projects
+      </div>
+      <h3>Prefer a quick chat?</h3>
+      <p>I'm based in Barcelona and work with clients globally. Drop me a line via any of the channels below — I'm always happy to jump on a quick discovery call.</p>
+
+      <div class="contact-links">
+        <a href="mailto:hello@nerizaalmirol.com" class="contact-link">
+          <div class="contact-link-icon">✉</div>
+          hello@nerizaalmirol.com
+        </a>
+        <a href="https://instagram.com/barcelonafoodhunters" class="contact-link">
+          <div class="contact-link-icon">📷</div>
+          @barcelonafoodhunters
+        </a>
+        <a href="https://linkedin.com" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          linkedin.com/in/nerizaalmirol
+        </a>
+        <a href="https://nerizaalmirol.com" class="contact-link">
+          <div class="contact-link-icon">🌐</div>
+          nerizaalmirol.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Neriza Almirol</div>
+  <p>© 2025 · Project Coordinator & Social Media Strategist · Barcelona</p>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuClose = document.getElementById('menuClose');
+
+  menuBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
+  menuClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+
+  document.querySelectorAll('.menu-link').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+</script>
+</body>
 </html>
